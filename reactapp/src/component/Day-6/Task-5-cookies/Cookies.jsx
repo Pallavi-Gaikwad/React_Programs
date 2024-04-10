@@ -9,10 +9,16 @@ function Cookies(){
         document.cookie = `${name}=${value}; ${expires}; path=/`
     }
 
-
+    function deleteCookie(name){
+        setCookies(name, null, null);
+    }
+    
     useEffect(()=>{
         setCookies("Name", "Pallavi", 365);
+        setCookies("lastName", "Gaikwad", 365);
+        setCookies("Skill", "React", 365);
         console.log(document.cookie);
+        deleteCookie("Name");
     });
 
     return(
