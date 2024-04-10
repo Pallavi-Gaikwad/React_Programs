@@ -23,9 +23,17 @@ import './App.css';
 // Day- Five
 // import CounterUseff from './component/Day-5/Task-1/CounterUseEff';
 
+// Day- Six
+// import SetTimeOut from './component/Day-6/Task-1-SetTimeOut/setTimeOut.jsx';
+// import SetInterval from './component/Day-6/Task-2-SetInterval/SetInterval.jsx';
+// import LocalStorageDemo from './component/Day-6/Task-3-localStorage/LocalStorage';
+// import ArrayObj from './component/Day-6/Task-4-ArrayObject/ArrayObject';
+import Cookies from './component/Day-6/Task-5-cookies/Cookies';
+
+
 // Practice
 // import MyComponent from './Z-Practice/useEffect';
-import Information from './Z-Practice/useEffect.jsx';
+// import Information from './Z-Practice/useEffect.jsx';
 
 
 function App() {
@@ -50,8 +58,14 @@ function App() {
      {/* <AddArrayEle/> */}
 
      {/* <MyComponent/> */}
-     <Information/>
+     {/* <Information/> */}
      {/* <CounterUseff/> */}
+
+     {/* <SetTimeOut/> */}
+     {/* <SetInterval/> */}
+     {/* <LocalStorageDemo/> */}
+     {/* <ArrayObj/> */}
+     <Cookies/>
       </>
     )
 }

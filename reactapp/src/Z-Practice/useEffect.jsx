@@ -37,6 +37,7 @@ import { useEffect, useState } from "react"
 function Information(){
 
     let [info, setInfo] = useState('');
+    // let [id, setId] = useState(1);
     
 
     //  const displayData = ()=>{
@@ -46,24 +47,22 @@ function Information(){
     // }
    
     useEffect(()=>{
-        const fetchData = async ()=>{
-            try{
-                const inputVal = document.getElementById("inputId").value;
-                if(inputVal !== null){
-                    const response = await fetch(`https://freetestapi.com/api/v1/students/${inputVal}`);
-                    const json = await response.json();
-                    console.log(json.name);
-                }
-               }catch(err){
-                console.log(err);
-               }
-            };
-        fetchData();
-    },[]);
+        let inputVal = document.getElementById("inputId");
+        const btn = document.getElementById("btn");
+        // setId(inputVal.value);
+        btn.addEventListener('click',()=>{
+            console.log(inputVal.value);
+            fetch( `https://freetestapi.com/api/v1/students/${inputVal.value}`)
+            .then(response => response.json())
+            .then(data=> setInfo(data.name))
+            .catch(err => {console.log(`data is not found please enter correct id`)})
+        });
+    }, []);
+    
     return(
         <>
-            <input type="number" id="inputId"/>
-            {/* <button onClick={displayData}>Search</button> */}
+            <input type="number" id="inputId" />
+            <button id="btn">Search</button>
             <p>{info}</p>
         </>
     )
