@@ -23,6 +23,7 @@ function Cookies(){
 
     return(
         <>
+        <h2>Cookie Program using useEffect()</h2>
         </>
     )
 }
